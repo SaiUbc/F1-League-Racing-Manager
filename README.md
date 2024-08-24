@@ -1,7 +1,7 @@
 # F1 League Management System
 
 ## Overview
-Welcome to the F1 League Management System! This project is designed to simplify the management of points, standings, and penalties in a Formula 1-style racing league. If you've been struggling with keeping track of race results, adjusting for post-race penalties, and calculating driver and constructor standings, this tool is here to help.
+Welcome to the F1 League Management System! This project is designed to simplify the management of points, standings, and penalties in a Formula 1-style esports racing league. If you've been struggling with keeping track of race results, adjusting for post-race penalties, and calculating driver and constructor standings, this tool is here to help.
 
 ## Features
 - **Driver & Team Management**: Track drivers and their respective teams, including their points and positions.
