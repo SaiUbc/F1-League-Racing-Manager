@@ -5,9 +5,9 @@ Thank you for your interest in contributing to the F1 League Management System! 
 ## How to Contribute
 
 ### 1. Reporting Bugs
-If you encounter any bugs or issues while using the system, please let us know by creating an issue on GitHub.
+If you encounter any bugs or issues while using the system, please let me know by creating an issue on GitHub.
 
-- **Check for existing issues**: Before submitting a new issue, please check the [Issues](https://github.com/yourusername/f1-league-manager/issues) page to see if it has already been reported.
+- **Check for existing issues**: Before submitting a new issue, please check the [Issues](https://https://github.com/SaiUbc/F1-League-Racing-Manager/issues) page to see if it has already been reported.
 - **Provide details**: When reporting an issue, please include:
   - A descriptive title.
   - Detailed steps to reproduce the issue.
@@ -15,7 +15,7 @@ If you encounter any bugs or issues while using the system, please let us know b
   - Any relevant error messages or screenshots.
 
 ### 2. Suggesting Enhancements
-If you have ideas for new features or improvements, we'd love to hear them!
+If you have ideas for new features or improvements, I'd love to hear them!
 
 - **Open a new issue**: Create an issue with a clear and descriptive title.
 - **Explain the rationale**: Describe the enhancement in detail, explaining why it would be beneficial and how it fits within the project’s scope.
@@ -40,11 +40,11 @@ If you would like to contribute code, please follow these guidelines:
     - Request feedback if you’re unsure about any part of the implementation.
 
 ### 4. Code Reviews
-We value code quality and maintainability, so all pull requests will undergo a review process:
+I value code quality and maintainability, so all pull requests will undergo a review process:
 
 - Be patient: Code reviews take time.
-- Be open to feedback: We may suggest changes or ask questions about your code.
+- Be open to feedback: I may suggest changes or ask questions about your code.
 - Make requested changes: If changes are requested, update your branch and push the changes. The PR will automatically update.
 
 ### Thank You!
-Your contributions make this project better! Thank you for taking the time to contribute. We’re excited to have you as part of the community.
+Your contributions make this project better! Thank you for taking the time to contribute. I'm excited to have you as part of the community.
