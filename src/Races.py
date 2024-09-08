@@ -3,7 +3,9 @@ from Drivers import Driver
 from Team import Team
 
 POINTS = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1]  # Points for top 10 finishes in F1
-class Race:
+RIDE_5 = [25, 20, 15, 13, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+class Race:    
     """
     Represents a single race in the F1 League.
 
@@ -22,15 +24,18 @@ class Race:
         self.__weather = ""
 
     def add_result(self, driver, position):
+        """Add a driver and their finishing position"""
         if isinstance(driver, Driver):
             driver.set_position(position)
             self.__results.append(driver)
 
     def apply_penalty(self, driver, positions_lost):
+        """Apply a penalty to a driver"""
         if isinstance(driver, Driver):
             self.__penalties[driver] = positions_lost
 
     def finalize_results(self):
+        """Finalize the results of the race"""
         for driver, penalty in self.__penalties.items():
             if penalty > 0 and isinstance(driver, Driver):
                 current_position = driver.get_position()
@@ -45,6 +50,7 @@ class Race:
         self.__results.sort(key=lambda x: x.position)
 
     def award_points(self):
+        """Award points to drivers and teams based on their finishing position"""
         for i, driver in enumerate(self.get_results()):
             if isinstance(driver, Driver) and isinstance(driver.team, Team) and i < len(self.POINTS):
                 #TODO! Fix this implementaion needs to account for private variables
@@ -52,6 +58,7 @@ class Race:
                 driver.team.points += self.POINTS[i]
 
     def print_race_results(self):
+        """Print the results of the Race"""
         print("Race Results:")
         for driver in self.get_results():
             if isinstance(driver, Driver) and isinstance(driver.team, Team):
