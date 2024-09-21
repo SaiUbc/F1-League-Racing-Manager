@@ -1,2 +1,16 @@
-Track,Driver,Car,Lap Time
-fuji_speedway,Rishabh,43,yuki
+Track,Driver,Car,Lap Time 
+goodwood,Arya,28,2:39:340
+goodwood,Rishabh,28,1:33:000
+goodwood,Sai,28,1:34:200  
+brands_hatch,Sai,79,2:12:083
+brands_hatch,Arya,79,2:24:183
+brands_hatch,Rishabh,79,2:07:430
+dragon_trail,Arya,42,2:27:972
+dragon_trail,Rishabh,42,2:11:889
+dragon_trail,Sai,42,2:05:799
+laguna_seca,Sai,49,1:52:137
+laguna_seca,Rishabh,49,1:47:777
+laguna_seca,Arya,49,2:10:638
+willow_springs,Arya,2,1:28:997
+willow_springs,Sai,2,1:17:038
+willow_springs,Rishabh,2,1:17:689

@@ -1,7 +1,8 @@
 import random
 import csv
+import pandas as pd
 
-Drivers = ['Arya', 'Rishabh', 'Aditya', 'Sai']
+Drivers = ['Arya', 'Rishabh', 'Sai']
 
 Tracks = {
     'lake_louise': "Lake Louise, USA",
@@ -59,6 +60,7 @@ def assign_car_driver_track(Drivers, Tracks) -> tuple:
 
     return Drivers, selected_track, car
 
+
 def record_race_results(Drivers, selected_track, car):
     """
     Records the race results in a CSV file.
@@ -69,20 +71,17 @@ def record_race_results(Drivers, selected_track, car):
         lap_time = input(f"Enter lap time for {driver}: ")
         race_results.append([selected_track, driver, car, lap_time])
         
-        with open('race_results.csv', 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(['Track', 'Driver', 'Car', 'Lap Time'])
-            writer.writerows(race_results)
-        
-        print("Race results recorded successfully.")
+    df = pd.DataFrame(race_results, columns=['Track', 'Driver', 'Car', 'Lap Time'])
+    df.to_csv('race_results.csv', mode='a', index=False)
+    
+    print("Race results recorded successfully.")
 
 
 def main():
+    for i in range(8):
+        drivers, track, car = assign_car_driver_track(Drivers, Tracks)
+        record_race_results(drivers, track, car)
 
-    drivers, track, car = assign_car_driver_track(Drivers, Tracks)
-    record_race_results(drivers, track, car)
-
-    
 
 if __name__ == "__main__":
     main()
