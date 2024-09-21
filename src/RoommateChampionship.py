@@ -1,4 +1,5 @@
 import random
+import csv
 
 Drivers = ['Arya', 'Rishabh', 'Aditya', 'Sai']
 
@@ -44,13 +45,13 @@ Tracks = {
 }
 
 
-def assign_car_driver_track(Drivers, Tracks):
+def assign_car_driver_track(Drivers, Tracks) -> tuple:
     """
     Assigns a car to each driver and a track to race on.
     """
     random.shuffle(Drivers)
     selected_track = random.choice(list(Tracks.keys()))
-    car = random.randint(1, 82)
+    car = random.randint(1, 82) 
     
     print(f"Drivers: {Drivers}")
     print(f"Selected Track: {Tracks[selected_track]}")
@@ -58,9 +59,30 @@ def assign_car_driver_track(Drivers, Tracks):
 
     return Drivers, selected_track, car
 
+def record_race_results(Drivers, selected_track, car):
+    """
+    Records the race results in a CSV file.
+    """
+    race_results = []
+        
+    for driver in Drivers:
+        lap_time = input(f"Enter lap time for {driver}: ")
+        race_results.append([selected_track, driver, car, lap_time])
+        
+        with open('race_results.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Track', 'Driver', 'Car', 'Lap Time'])
+            writer.writerows(race_results)
+        
+        print("Race results recorded successfully.")
+
 
 def main():
-    assign_car_driver_track(Drivers, Tracks)
+
+    drivers, track, car = assign_car_driver_track(Drivers, Tracks)
+    record_race_results(drivers, track, car)
+
+    
 
 if __name__ == "__main__":
     main()
