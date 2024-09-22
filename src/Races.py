@@ -1,4 +1,3 @@
-
 from Drivers import Driver
 from Team import Team
 
@@ -12,9 +11,9 @@ class Race:
     Attributes:
         results (list of Driver): The list of drivers and their finishing positions.
         penalties (dict of Driver to int): A mapping of drivers to the number of positions they lost due to penalties.
-        fastest_lap (Driver): The driver who set the fastest
-        laps (int): The number of laps
-        weather (str): The weather conditions
+        fastest_lap (Driver): The driver who set the fastest lap.
+        laps (int): The number of laps.
+        weather (str): The weather conditions.
     """
     def __init__(self):
         self.__results = []
@@ -24,13 +23,25 @@ class Race:
         self.__weather = ""
 
     def add_result(self, driver, position):
-        """Add a driver and their finishing position"""
+        """
+        Add a driver and their finishing position.
+
+        Args:
+            driver (Driver): The driver object.
+            position (int): The finishing position of the driver.
+        """
         if isinstance(driver, Driver):
             driver.set_position(position)
             self.__results.append(driver)
 
     def apply_penalty(self, driver, positions_lost):
-        """Apply a penalty to a driver"""
+        """
+        Apply a penalty to a driver.
+
+        Args:
+            driver (Driver): The driver object.
+            positions_lost (int): The number of positions the driver lost due to penalties.
+        """
         if isinstance(driver, Driver):
             self.__penalties[driver] = positions_lost
 
@@ -53,7 +64,6 @@ class Race:
         """Award points to drivers and teams based on their finishing position"""
         for i, driver in enumerate(self.get_results()):
             if isinstance(driver, Driver) and isinstance(driver.team, Team) and i < len(self.POINTS):
-                #TODO! Fix this implementaion needs to account for private variables
                 driver.points += self.POINTS[i]
                 driver.team.points += self.POINTS[i]
 
@@ -64,34 +74,93 @@ class Race:
             if isinstance(driver, Driver) and isinstance(driver.team, Team):
                 print(f"{driver.get_name()} ({driver.team.get_name()}) - Position: {driver.get_position()}, Points: {driver.get_points()}")
 
-
     # Getters and setters
     def get_results(self):
+        """
+        Get the results of the race.
+
+        Returns:
+            list of Driver: The list of drivers and their finishing positions.
+        """
         return self.__results
 
     def set_results(self, results):
+        """
+        Set the results of the race.
+
+        Args:
+            results (list of Driver): The list of drivers and their finishing positions.
+        """
         self.__results = results
 
     def get_penalties(self):
+        """
+        Get the penalties applied to drivers.
+
+        Returns:
+            dict of Driver to int: A mapping of drivers to the number of positions they lost due to penalties.
+        """
         return self.__penalties
 
     def set_penalties(self, penalties):
+        """
+        Set the penalties applied to drivers.
+
+        Args:
+            penalties (dict of Driver to int): A mapping of drivers to the number of positions they lost due to penalties.
+        """
         self.__penalties = penalties
 
     def get_fastest_lap(self):
+        """
+        Get the driver who set the fastest lap.
+
+        Returns:
+            Driver: The driver who set the fastest lap.
+        """
         return self.__fastest_lap
 
     def set_fastest_lap(self, fastest_lap):
+        """
+        Set the driver who set the fastest lap.
+
+        Args:
+            fastest_lap (Driver): The driver who set the fastest lap.
+        """
         self.__fastest_lap = fastest_lap
 
     def get_laps(self):
+        """
+        Get the number of laps in the race.
+
+        Returns:
+            int: The number of laps.
+        """
         return self.__laps
 
     def set_laps(self, laps):
+        """
+        Set the number of laps in the race.
+
+        Args:
+            laps (int): The number of laps.
+        """
         self.__laps = laps
 
     def get_weather(self):
+        """
+        Get the weather conditions of the race.
+
+        Returns:
+            str: The weather conditions.
+        """
         return self.__weather
 
     def set_weather(self, weather):
+        """
+        Set the weather conditions of the race.
+
+        Args:
+            weather (str): The weather conditions.
+        """
         self.__weather = weather

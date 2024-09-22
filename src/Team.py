@@ -23,12 +23,27 @@ class Team:
         self.__points = 0
 
     def add_driver(self, driver):
+        """
+        Adds a driver to the team.
+
+        Parameters:
+        driver (Driver): The driver object to be added.
+
+        Returns:
+        None
+        """
         if isinstance(driver, Driver):
             self.__drivers.append(driver)
         else:
             print("The driver is not a valid Driver object.")
 
     def __repr__(self):
+        """
+        Returns a string representation of the Team object.
+
+        Returns:
+            str: A string representation of the Team object, including the drivers and points.
+        """
         return f"{self.get_drivers()} - {self.get_points()} points"
     
     
