@@ -1,4 +1,5 @@
-"""
+class Driver:
+    """
     Represents a driver participating in the F1 League.
 
     Attributes:
@@ -7,10 +8,7 @@
         points (int): The points the driver has accumulated.
         position (int): The finishing position of the driver in a race.
         fastest_lap (bool): Whether the driver has set the
-"""
-
-
-class Driver:
+    """
     def __init__(self, name, team):
         self.__name = name
         self.__team = team
