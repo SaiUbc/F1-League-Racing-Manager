@@ -86,7 +86,7 @@ australia_gp.export_standings_to_excel(driver_standings, team_standings)
 Contributions are welcome! If you find a bug or have an idea for an improvement, feel free to open an issue or submit a pull request.
 
 ## LICENSE
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
 For any questions or suggestions, feel free to reach out via GitHub issues or contact me directly.
