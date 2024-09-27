@@ -1,0 +1,2 @@
+#Ignores the CSV files which have data
+.csv
