@@ -50,7 +50,7 @@ Cars = {
 
 
 # Add column headings as global variables
-column_headings = ['Track', 'Driver', 'Car', 'Lap Time', 'Secton 1', 'Section 2', 'Section 3']
+column_headings = ['Track', 'Driver', 'Car', 'Lap Time', 'Sector 1', 'Sector 2', 'Sector 3']
 
 
 
@@ -81,9 +81,9 @@ def record_race_results(Drivers, selected_track, car):
 
 
 def main():
-    for track in Tracks:
-        for car in Cars:
-            record_race_results(Drivers, track, Cars[car]['Name'])
+    track = 'japan'
+    for car in Cars:
+        record_race_results(Drivers, track, Cars[car]['Name'])
                 
 if __name__ == "__main__":
     main()
