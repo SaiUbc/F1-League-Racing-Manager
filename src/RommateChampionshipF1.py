@@ -81,9 +81,9 @@ def record_race_results(Drivers, selected_track, car):
 
 
 def main():
-       for cars in Cars:
-        track = 'japan'
-        record_race_results(Drivers, track, Cars[cars]['Name'])
+    for track in Tracks:
+        for car in Cars:
+            record_race_results(Drivers, track, Cars[car]['Name'])
                 
 if __name__ == "__main__":
     main()
